@@ -20,15 +20,16 @@
     
             public static void Main (string [] args)
             {
-                List<Card> initial = Card.CreateDeck ();
-                Console.WriteLine ("Deck created with " + initial.Count + " items");
+                //List<Card> initial = Card.CreateDeck ();
+                Card.CreateDeck ();
+                Console.WriteLine ("Deck created with " + Card.fullDeck.Count + " items");
 
                 // List<Card> sorted = Card.SortByFaceValue (initial);
-                List<Card> sorted = Card.SortByFaceValue (initial);
+                List<Card> sorted = Card.SortByFaceValue (Card.fullDeck);
                 Console.WriteLine ("\nSorted by card face value.");
                 PrintDeck (sorted);
     
-                List<Card> shuffled = Card.ShuffleTheDeck (initial);
+                List<Card> shuffled = Card.ShuffleTheDeck (Card.fullDeck);
                 Console.WriteLine ("\nShuffled deck: ");
                 PrintDeck (shuffled);
     
@@ -47,6 +48,7 @@
         {
             public Suit suit { get; private set; }
             public FaceValue faceValue { get; private set; }
+            public static List<Card> fullDeck { get; private set; }
     
             public Card (Suit suit, FaceValue rank) : this ()
             {
@@ -94,7 +96,18 @@
             }
     
     
-            public static List<Card> CreateDeck ()
+            //public static List<Card> CreateDeck ()
+            //{
+            //    IEnumerable<Suit> suits = Enum.GetValues (typeof (Suit)).Cast<Suit> ();
+            //    IEnumerable<FaceValue> faceValues = Enum.GetValues (typeof (FaceValue)).Cast<FaceValue> ();
+    
+            //    var result = from su in suits
+            //                 from fv in faceValues
+            //                 select new Card (su, fv);
+            //    return result.ToList ();
+            //}
+            
+            public static void CreateDeck ()
             {
                 IEnumerable<Suit> suits = Enum.GetValues (typeof (Suit)).Cast<Suit> ();
                 IEnumerable<FaceValue> faceValues = Enum.GetValues (typeof (FaceValue)).Cast<FaceValue> ();
@@ -102,7 +115,7 @@
                 var result = from su in suits
                              from fv in faceValues
                              select new Card (su, fv);
-                return result.ToList ();
+                 fullDeck = result.ToList (); 
             }
     
             public static List<Card> SortByFaceValue (List<Card> candidate)
@@ -117,6 +130,14 @@
                 return shuffled.ToList ();
     
             }
+
+        public static Card PickCard ( int indexPicker)
+        {          
+            Card picked = fullDeck.ElementAt (indexPicker);
+            return picked;
+
+        }
+          
     
     
         }

@@ -33,7 +33,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="DeckTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
