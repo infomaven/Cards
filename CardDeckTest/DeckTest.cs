@@ -11,19 +11,10 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace PlayCards
 {
-  
-
-    
-    
+   
     [TestFixture ()]
     public class DeckTest
     {
-     
-        [SetUp]
-        public void DeckCreation ()
-        {
-                     
-        }
 
         [Test ()]
         public void TestCreateDeckCheckCount ()
