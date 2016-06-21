@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck", "Cards\Deck.csproj", "{7713C827-057E-4F33-B7AD-CE60EC2AC6F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckUnitTests", "CardDeckTest\DeckUnitTests.csproj", "{7E96DD42-615E-4313-81E0-F06DA53BCDDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7713C827-057E-4F33-B7AD-CE60EC2AC6F4}.Debug|x86.ActiveCfg = Debug|x86
+		{7713C827-057E-4F33-B7AD-CE60EC2AC6F4}.Debug|x86.Build.0 = Debug|x86
+		{7713C827-057E-4F33-B7AD-CE60EC2AC6F4}.Release|x86.ActiveCfg = Release|x86
+		{7713C827-057E-4F33-B7AD-CE60EC2AC6F4}.Release|x86.Build.0 = Release|x86
+		{7E96DD42-615E-4313-81E0-F06DA53BCDDB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E96DD42-615E-4313-81E0-F06DA53BCDDB}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E96DD42-615E-4313-81E0-F06DA53BCDDB}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E96DD42-615E-4313-81E0-F06DA53BCDDB}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
